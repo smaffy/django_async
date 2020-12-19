@@ -11,5 +11,7 @@ Dependencies
 
         pip install uvicorn
 
+Run project:
+
         (env)$ uvicorn django_async.asgi:application
 
