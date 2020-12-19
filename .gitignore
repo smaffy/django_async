@@ -1,0 +1,12 @@
+
+/media/uploads/
+/media/cache/
+/staticfiles/
+
+*.pyc
+__pycache
+/Pipfile
+/Pipfile.lock
+/venv/
+
+/.idea/
