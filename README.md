@@ -36,3 +36,11 @@ run multiple operations asynchronously, aggregate the results, and return them b
 
 ********************
 
+Burnt Meats (Sync Call)
+
+just create sync func and call in async
+
+    http://localhost:8000/burn_some_meats
+
+
+

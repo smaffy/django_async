@@ -97,6 +97,13 @@ async def smoke2(smokables: List[str] = None, flavor: str = "Sweet Baby Ray's") 
     print(f"Who doesn't love smoked {loved_smokable}?")
 
 
+# helper for burn_some_meats
+def oversmoke() -> None:
+    """ If it's not dry, it must be uncooked """
+    sleep(5)
+    print("Who doesn't love burnt meats?")
+
+
 # views
 
 async def index(request):
@@ -143,4 +150,9 @@ async def smoke_some_meats2(request) -> HttpResponse:
 
     loop.create_task(smoke2(*smoke_args))
     return HttpResponse(f"Smoking some {to_smoke}....")
+
+
+async def burn_some_meats(request):
+    oversmoke()     # call sync func
+    return HttpResponse(f"Burned some meats.")
 
