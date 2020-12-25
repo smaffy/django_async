@@ -19,9 +19,20 @@ Run project:
 ************************
 the HTTP response is sent back before the first sleep call
     
-        http://localhost:8000/async/
+    http://localhost:8000/async/
 
 the HTTP response is sent after the loop and the request to https://httpbin.org/ completes
 
-        http://localhost:8000/sync/
+    http://localhost:8000/sync/
+***************************
+
+Smoking Some Meats 
+
+run multiple operations asynchronously, aggregate the results, and return them back to the caller
+
+    1. http://localhost:8000/smoke_some_meats/
+    2. http://localhost:8000/smoke_some_meats2/
+       http://localhost:8000/smoke_some_meats2/?to_smoke=ice%20cream,%20bananas,%20cheese&flavor=Gold%20Bond%20Medicated%20Powder
+
+********************
 
