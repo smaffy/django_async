@@ -55,3 +55,13 @@ Celery and Async Views
 
 Could use an async view to send an email or make a one-off database modification, but have Celery clean out your 
 database at a scheduled time every night or generate and send customer reports
+
+**********************
+
+In production, be sure to use Gunicorn to manage 
+Uvicorn in order to take advantage of both concurrency (via Uvicorn) and parallelism (via Gunicorn workers):
+
+    gunicorn -w 3 -k uvicorn.workers.UvicornWorker hello_async.asgi:application
+
+********************
+    https://wersdoerfer.de/blogs/ephes_blog/django-31-async/
