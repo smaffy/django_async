@@ -43,5 +43,8 @@ result = only sync
 
     http://localhost:8000/burn_some_meats
 
+********************
 
+Sync to Async
+synchronous call inside an async view (like to interact with the database via the Django ORM, for example), use sync_to_async either as a wrapper or a decorator
 

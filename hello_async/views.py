@@ -4,6 +4,7 @@ from time import sleep
 from typing import List
 
 import httpx
+from asgiref.sync import sync_to_async
 from django.http import HttpResponse
 
 
@@ -156,3 +157,9 @@ async def burn_some_meats(request):
     oversmoke()     # call sync func
     return HttpResponse(f"Burned some meats.")
 
+
+async def async_with_sync_view(request):
+    loop = asyncio.get_event_loop()
+    async_function = sync_to_async(http_call_sync)
+    loop.create_task(async_function())
+    return HttpResponse("Non-blocking HTTP request (via sync_to_async)")
