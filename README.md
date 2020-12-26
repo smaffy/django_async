@@ -46,5 +46,12 @@ result = only sync
 ********************
 
 Sync to Async
-synchronous call inside an async view (like to interact with the database via the Django ORM, for example), use sync_to_async either as a wrapper or a decorator
+synchronous call inside an async view (like to interact with the database via the Django ORM, for example), 
+use sync_to_async either as a wrapper or a decorator
 
+*******************
+
+Celery and Async Views
+
+Could use an async view to send an email or make a one-off database modification, but have Celery clean out your 
+database at a scheduled time every night or generate and send customer reports
